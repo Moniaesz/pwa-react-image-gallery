@@ -1,0 +1,22 @@
+/* Single Gallery Image */
+.images__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  max-width: 20rem;
+}
+.single-img_wrapper {
+  position: relative;
+}
+.images__single-img {
+  max-width: 20rem;
+  max-height: 25rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+.images__single-img:hover {
+  filter: grayscale(100%)
+}

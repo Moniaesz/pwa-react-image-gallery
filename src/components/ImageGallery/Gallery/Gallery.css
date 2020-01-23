@@ -1,0 +1,14 @@
+/* Gallery */
+.images__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+.btn-sample-images {
+  color: #000;
+  background: #24FEE1;
+}
