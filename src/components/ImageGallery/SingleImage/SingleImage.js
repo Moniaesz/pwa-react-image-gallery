@@ -1,16 +1,23 @@
 import React from 'react';
 import './SingleImage.css';
+import ImageInfo from '../../ImageInfo/ImageInfo';
 
 function SingleImage (props) {
-  const {title, src, description } = props.image;
+  const {title, src, description, id, category } = props.image;
 
   return (
     <li className='images__list-item'>
-      <img
-        src={src}
-        alt={title}
-        className='images__single-img'
-      />
+      <div className='single-img_wrapper'>
+        <ImageInfo
+          id={id}
+          category={category}
+        />
+        <img
+          src={src}
+          alt={title}
+          className='images__single-img'
+        />
+      </div>
       <h4 className='single-img__description'>{description}
       </h4>
 

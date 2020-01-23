@@ -20,3 +20,12 @@
 .images__single-img:hover {
   filter: grayscale(100%)
 }
+.single-img__description {
+  margin-top: 0.5rem;
+  max-width: 20rem;
+  background: #fff;
+  padding: 0.5rem;
+  font-weight: 300;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

@@ -1,0 +1,29 @@
+.image-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 3;
+}
+.delete-icon {
+  height: 2.5rem;
+  cursor: pointer;
+  background: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: rgba(62, 100, 190, 0.5);
+  transition: 0.1s ease-in;
+}
+.delete-icon:hover {
+  background: rgba(62, 100, 190, 0.952);
+}
+.image-category {
+  background: rgb(235, 121, 14);
+  color: white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
