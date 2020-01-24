@@ -2,7 +2,7 @@ import React from 'react';
 import deleteIcon from '../../assets/icons/delete-white.svg';
 import './ImageInfo.css';
 
-function ImageInfo ({ category }) {
+function ImageInfo ({ id, category, deleteImage }) {
 
   return (
     <ul className='image-details'>
@@ -13,6 +13,7 @@ function ImageInfo ({ category }) {
         src={deleteIcon}
         className='delete-icon'
         alt='icon for deleting slide from gallery'
+        onClick={() => deleteImage(id)}
       />
     </ul>
   )

@@ -4,6 +4,7 @@ import ImageInfo from '../../ImageInfo/ImageInfo';
 
 function SingleImage (props) {
   const {title, src, description, id, category } = props.image;
+  const { deleteImage } = props;
 
   return (
     <li className='images__list-item'>
@@ -11,6 +12,7 @@ function SingleImage (props) {
         <ImageInfo
           id={id}
           category={category}
+          deleteImage={deleteImage}
         />
         <img
           src={src}

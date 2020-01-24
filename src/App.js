@@ -82,6 +82,15 @@ function App() {
     setSelectedCategory(selectedCategory)
   }
 
+  const deleteImage = (id) => {
+    console.log('prep to go!')
+    let updatedImages = [...images];
+    const filteredImages = updatedImages.filter((image) => (
+      image.id !== id
+    ));
+    setImages(filteredImages)
+  }
+
   return (
     <div className="App">
       <Header />
@@ -94,6 +103,7 @@ function App() {
           images={images}
           loadSampleImages={loadSampleImages}
           selectedCategory={selectedCategory}
+          deleteImage={deleteImage}
         />
       </div>
     </div>

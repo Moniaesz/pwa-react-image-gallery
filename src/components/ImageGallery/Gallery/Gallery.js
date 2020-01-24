@@ -2,7 +2,7 @@ import React from 'react';
 import './Gallery.css';
 import SingleImage from '../Gallery/../SingleImage/SingleImage';
 
-function Gallery ({ images, loadSampleImages, selectedCategory }) {
+function Gallery ({ images, loadSampleImages, selectedCategory, deleteImage }) {
 
   let showingImages;
 
@@ -37,6 +37,7 @@ function Gallery ({ images, loadSampleImages, selectedCategory }) {
             <SingleImage
               key={image.id}
               image={image}
+              deleteImage={deleteImage}
             />
           ))
         }
