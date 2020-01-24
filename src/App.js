@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Gallery from './components/ImageGallery/Gallery/Gallery';
 import sampleImages from './sampleImages';
+import FilterImages from './components/FilterImages/FilterImages';
 
 const generateRandomID = function () {
   return '_' + Math.random().toString(36).substr(1, 8);
@@ -71,18 +72,28 @@ function App() {
       category: 'people'
     }
   ]);
+  const [ selectedCategory, setSelectedCategory ] = useState('all');
 
   const loadSampleImages = () => {
     setImages(sampleImages);
+  }
+
+  const filterImages = (selectedCategory) => {
+    setSelectedCategory(selectedCategory)
   }
 
   return (
     <div className="App">
       <Header />
       <div className='main'>
+        <FilterImages
+          selectedCategory={selectedCategory}
+          filterImages={filterImages}
+        />
         <Gallery
           images={images}
           loadSampleImages={loadSampleImages}
+          selectedCategory={selectedCategory}
         />
       </div>
     </div>

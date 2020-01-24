@@ -1,0 +1,31 @@
+/* Filter Images Section */
+.filter-images__section {
+  max-width: 40rem;
+  margin: 3rem auto auto auto;
+  background: rgba(209, 209, 209, 0.452);
+  padding: 2rem 2rem 4rem 2rem;
+}
+.filter-images__heading {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.filter-images__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+}
+.filter-images__list-item {
+  font-size: 1.3rem;
+  border: 3px solid rgb(235, 121, 14);
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s step-end;
+  width: 7rem;
+  margin-top: 0.5rem;
+}
+.filter-images__list-item:hover {
+  background: rgb(235, 121, 14);
+  color: #fff;
+}

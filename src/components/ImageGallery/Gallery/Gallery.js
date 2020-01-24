@@ -2,7 +2,18 @@ import React from 'react';
 import './Gallery.css';
 import SingleImage from '../Gallery/../SingleImage/SingleImage';
 
-function Gallery ({ images, loadSampleImages }) {
+function Gallery ({ images, loadSampleImages, selectedCategory }) {
+
+  let showingImages;
+
+  if (selectedCategory === 'all') {
+    showingImages = images;
+  } else {
+    showingImages = images.filter((image) => (
+      image.category === selectedCategory
+    ))
+  }
+
   return (
     <section className='gallery-section'>
 
@@ -22,7 +33,7 @@ function Gallery ({ images, loadSampleImages }) {
         style={{background: images.length !== 0 ? '#f5f5f5' : 'none' }}
       >
         {
-          images.map((image) => (
+          showingImages.map((image) => (
             <SingleImage
               key={image.id}
               image={image}
