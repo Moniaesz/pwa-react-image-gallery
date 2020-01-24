@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Gallery from './components/ImageGallery/Gallery/Gallery';
 import sampleImages from './sampleImages';
 import FilterImages from './components/FilterImages/FilterImages';
+import AddImageForm from './components/AddImageForm/AddImageForm';
 
 const generateRandomID = function () {
   return '_' + Math.random().toString(36).substr(1, 8);
@@ -82,13 +83,20 @@ function App() {
     setSelectedCategory(selectedCategory)
   }
 
+  const addImage = (image) => {
+    let updatedImages = [...images];
+    updatedImages.push(image);
+    console.log(`updatedImages ${JSON.stringify(updatedImages)}`)
+    setImages(updatedImages);
+  }
+
   const deleteImage = (id) => {
     console.log('prep to go!')
     let updatedImages = [...images];
     const filteredImages = updatedImages.filter((image) => (
       image.id !== id
     ));
-    setImages(filteredImages)
+    setImages(filteredImages);
   }
 
   return (
@@ -105,6 +113,7 @@ function App() {
           selectedCategory={selectedCategory}
           deleteImage={deleteImage}
         />
+        <AddImageForm addImage={addImage}/>
       </div>
     </div>
   );
