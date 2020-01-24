@@ -1,0 +1,19 @@
+/* Slider Nav*/
+.slider-nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: fit-content;
+  border-radius: 5px;
+  margin: 0 auto 0.5rem auto;
+}
+.slider-nav__item {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+.slider-nav__icon {
+  height: 3.5rem;
+  cursor: pointer;
+}

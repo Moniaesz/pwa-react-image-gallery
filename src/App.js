@@ -5,6 +5,7 @@ import Gallery from './components/ImageGallery/Gallery/Gallery';
 import sampleImages from './sampleImages';
 import FilterImages from './components/FilterImages/FilterImages';
 import AddImageForm from './components/AddImageForm/AddImageForm';
+import Slider from './components/Slider/Slider/Slider';
 
 const generateRandomID = function () {
   return '_' + Math.random().toString(36).substr(1, 8);
@@ -103,6 +104,7 @@ function App() {
     <div className="App">
       <Header />
       <div className='main'>
+        <Slider images={images} />
         <FilterImages
           selectedCategory={selectedCategory}
           filterImages={filterImages}
