@@ -1,0 +1,12 @@
+/* Slider */
+.slider-images__list {
+  height: fit-content;
+}
+.slider-images__wrapper {
+  margin: 0 auto;
+  display: flex;
+  width: 1000px;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+}
