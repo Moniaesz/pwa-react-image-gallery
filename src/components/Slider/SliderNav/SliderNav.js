@@ -3,7 +3,7 @@ import arrowLeft from '../../../assets/icons/arrow-left.svg';
 import arrowRight from '../../../assets/icons/arrow-right.svg';
 import './SliderNav.css';
 
-function SliderNav (s) {
+function SliderNav ({ nextImage, previousImage }) {
 
   return (
     <nav className='slider-nav'>
@@ -12,6 +12,7 @@ function SliderNav (s) {
         <img
           src={arrowLeft}
           alt='arrow left' className='slider-nav__icon arrow-left'
+          onClick={previousImage}
         />
       </li>
       <li className='slider-nav__item'>Browse images</li>
@@ -19,6 +20,7 @@ function SliderNav (s) {
         <img
           src={arrowRight}
           alt='arrow left' className='slider-nav__icon arrow-right'
+          onClick={nextImage}
         />
       </li>
     </ul>

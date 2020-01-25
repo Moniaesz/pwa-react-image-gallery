@@ -3,9 +3,13 @@ import './SliderImage.css';
 
 function SliderImage (props) {
   const { title, src, description } = props.image;
+  const { translateValue } = props;
 
   return (
-    <div className='slider-image__container'>
+    <div
+      className='slider-image__container'
+      style={{transform: `translate(-${translateValue}px)`}}
+    >
       <h3>{title}</h3>
       <ul className='slider-image__wrapper'>
         <img
