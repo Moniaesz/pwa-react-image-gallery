@@ -3,7 +3,7 @@ import './Slider.css';
 import SliderNav from '../SliderNav/SliderNav';
 import SliderImage from '../SliderImage/SliderImage';
 
-function Slider ({ images, nextImage, previousImage, translateValue }) {
+function Slider ({ images, nextImage, previousImage, translateValue, deleteImage }) {
 
   return (
     <section className='slider-section'>
@@ -19,6 +19,7 @@ function Slider ({ images, nextImage, previousImage, translateValue }) {
               key={image.id}
               image={image}
               translateValue={translateValue}
+              deleteImage={deleteImage}
             />
           ))}
         </div>

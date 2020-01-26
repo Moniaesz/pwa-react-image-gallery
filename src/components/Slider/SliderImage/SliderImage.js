@@ -1,9 +1,11 @@
 import React from 'react';
 import './SliderImage.css';
+import ImageInfo from '../../ImageInfo/ImageInfo';
+
 
 function SliderImage (props) {
-  const { title, src, description } = props.image;
-  const { translateValue } = props;
+  const { title, src, description, id, category } = props.image;
+  const { translateValue, deleteImage } = props;
 
   return (
     <div
@@ -12,6 +14,7 @@ function SliderImage (props) {
     >
       <h3>{title}</h3>
       <ul className='slider-image__wrapper'>
+        <ImageInfo id={id} category={category} deleteImage={deleteImage}/>
         <img
           src={src}
           alt={title}

@@ -133,6 +133,7 @@ function App() {
           translateValue={translateValue}
           nextImage={nextImage}
           previousImage={previousImage}
+          deleteImage={deleteImage}
         />
         <FilterImages
           selectedCategory={selectedCategory}
