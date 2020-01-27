@@ -1,0 +1,31 @@
+/* Edit description form */
+.edit-text-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: stretch;
+  background: rgba(0, 0, 0, 0.89);
+  justify-content: center;
+  padding: 1rem;
+}
+.btn-toggle-description {
+  background: rgb(240, 240, 240);
+  color: rgba(0, 0, 0, 0.89);
+  border: 2px solid rgba(0, 0, 0, 0.89);
+}
+.btn-toggle-description:hover {
+  color: rgb(240, 240, 240);
+  background: rgba(0, 0, 0, 0.89);
+}
+.btn-change {
+  margin: 1rem auto;
+  background: rgb(3, 153, 133);
+  width: 100;
+}
+.btn-discard {
+  background: crimson;
+}
+.edit-text-textarea {
+  font-family: inherit;
+  font-size: 1.1rem;
+}

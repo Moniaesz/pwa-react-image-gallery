@@ -124,6 +124,15 @@ function App() {
     setImages(filteredImages);
   }
 
+  const updateImageDescription = (desc, id) => {
+    const imageToUpdate = images.find((image) => image.id === id);
+    imageToUpdate['description'] = desc;
+    const imageID = images.indexOf(imageToUpdate);
+    let updatedImages = [...images];
+    updatedImages[imageID] = imageToUpdate;
+    setImages(updatedImages);
+  }
+
   return (
     <div className="App">
       <Header />
@@ -144,6 +153,7 @@ function App() {
           loadSampleImages={loadSampleImages}
           selectedCategory={selectedCategory}
           deleteImage={deleteImage}
+          updateImageDescription={updateImageDescription}
         />
         <AddImageForm addImage={addImage}/>
       </div>
