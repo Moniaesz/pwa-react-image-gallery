@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Gallery.css';
 import SingleImage from '../Gallery/../SingleImage/SingleImage';
+import { ImagesContext } from '../../../contexts/ImagesContext';
 
-function Gallery ({ images, loadSampleImages, selectedCategory, deleteImage, updateImageDescription }) {
+function Gallery () {
+
+  const { images, loadSampleImages, selectedCategory, deleteImage, updateImageDescription } = useContext(ImagesContext);
 
   let showingImages;
 
