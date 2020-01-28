@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from 'react';
-import { generateRandomID } from '../../sampleImages';
+import { generateRandomID } from '../../helpers/generateID';
 import './AddImageForm.css';
 import { ImagesContext } from '../../contexts/ImagesContext';
 

@@ -1,9 +1,6 @@
 import React, { createContext, useState } from 'react';
 import sampleImages from '../sampleImages';
-
-const generateRandomID = function () {
-  return '_' + Math.random().toString(36).substr(1, 8);
-};
+import { generateRandomID } from '../helpers/generateID';
 
 export const ImagesContext = createContext();
 
@@ -96,26 +93,24 @@ const ImagesContextProvider = (props) => {
     }
   }
 
+  // filter images in Gallery
   const filterImages = (selectedCategory) => {
     setSelectedCategory(selectedCategory)
   }
 
+  // add image to Gallery & Slider
   const addImage = (image) => {
-    let updatedImages = [...images];
-    updatedImages.push(image);
-    console.log(`updatedImages ${JSON.stringify(updatedImages)}`)
-    setImages(updatedImages);
+    setImages(images.concat(image));
   }
 
+  // add image to Gallery & Slider
   const deleteImage = (id) => {
-    console.log('prep to go!')
-    let updatedImages = [...images];
-    const filteredImages = updatedImages.filter((image) => (
+    setImages(images.filter((image) => (
       image.id !== id
-    ));
-    setImages(filteredImages);
+    )));
   }
 
+  // add image description in Gallery & Slider
   const updateImageDescription = (desc, id) => {
     const imageToUpdate = images.find((image) => image.id === id);
     imageToUpdate['description'] = desc;
@@ -125,11 +120,23 @@ const ImagesContextProvider = (props) => {
     setImages(updatedImages);
   }
 
-    return (
-      <ImagesContext.Provider value={{images, selectedCategory, translateValue, count, nextImage, previousImage, loadSampleImages, addImage, filterImages, deleteImage, updateImageDescription}}>
+  return (
+    <ImagesContext.Provider
+      value={{
+        images,
+        selectedCategory,
+        translateValue,
+        nextImage,
+        previousImage,
+        loadSampleImages,
+        addImage,
+        filterImages,
+        deleteImage,
+        updateImageDescription}}
+      >
         {props.children}
-      </ImagesContext.Provider>
-    )
+    </ImagesContext.Provider>
+  );
 }
 
 export default ImagesContextProvider;
