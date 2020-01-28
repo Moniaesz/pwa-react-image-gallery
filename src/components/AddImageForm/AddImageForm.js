@@ -1,8 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import { generateRandomID } from '../../sampleImages';
 import './AddImageForm.css';
+import { ImagesContext } from '../../contexts/ImagesContext';
 
-function AddImageForm ({ addImage }) {
+function AddImageForm () {
+
+  const { addImage } = useContext(ImagesContext);
 
   const titleRef = useRef();
   const descriptionRef = useRef();

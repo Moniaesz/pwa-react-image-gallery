@@ -18,7 +18,7 @@ function App() {
           <Slider />
           <FilterImages />
           <Gallery/>
-          {/* <AddImageForm addImage={addImage}/> */}
+          <AddImageForm />
         </div>
       </ImagesContextProvider>
     </div>
