@@ -16,10 +16,7 @@ function App() {
       <ImagesContextProvider>
         <div className='main'>
           <Slider />
-          {/* <FilterImages
-            selectedCategory={selectedCategory}
-            filterImages={filterImages}
-          /> */}
+          <FilterImages />
           <Gallery/>
           {/* <AddImageForm addImage={addImage}/> */}
         </div>

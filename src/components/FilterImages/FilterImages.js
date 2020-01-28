@@ -1,7 +1,10 @@
-import React  from 'react';
+import React, { useContext }  from 'react';
 import './FilterImages.css';
+import { ImagesContext } from '../../contexts/ImagesContext';
 
-function FilterImages ({ selectedCategory, filterImages }) {
+function FilterImages () {
+
+  const { selectedCategory, filterImages } = useContext(ImagesContext);
 
   const categories = ['landscape', 'people', 'cities', 'all'];
 
