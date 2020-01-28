@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Slider.css';
 import SliderNav from '../SliderNav/SliderNav';
 import SliderImage from '../SliderImage/SliderImage';
+import { ImagesContext } from '../../../contexts/ImagesContext';
 
-function Slider ({ images, nextImage, previousImage, translateValue, deleteImage }) {
+function Slider () {
+
+  const { images, nextImage, previousImage, translateValue, deleteImage } = useContext(ImagesContext);
 
   return (
     <section className='slider-section'>

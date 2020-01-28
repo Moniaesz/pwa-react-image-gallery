@@ -15,14 +15,8 @@ function App() {
       <Header />
       <ImagesContextProvider>
         <div className='main'>
-          {/* <Slider
-            images={images}
-            translateValue={translateValue}
-            nextImage={nextImage}
-            previousImage={previousImage}
-            deleteImage={deleteImage}
-          />
-          <FilterImages
+          <Slider />
+          {/* <FilterImages
             selectedCategory={selectedCategory}
             filterImages={filterImages}
           /> */}
