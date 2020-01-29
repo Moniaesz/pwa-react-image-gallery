@@ -5,6 +5,7 @@ import { generateRandomID } from '../helpers/generateID';
 export const ImagesContext = createContext();
 
 const ImagesContextProvider = (props) => {
+
   const [ images, setImages ] = useState([
     {
       id: generateRandomID(),
@@ -124,6 +125,7 @@ const ImagesContextProvider = (props) => {
     <ImagesContext.Provider
       value={{
         images,
+        setImages,
         selectedCategory,
         translateValue,
         nextImage,

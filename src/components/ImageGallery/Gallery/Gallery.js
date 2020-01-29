@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './Gallery.css';
 import SingleImage from '../Gallery/../SingleImage/SingleImage';
 import { ImagesContext } from '../../../contexts/ImagesContext';
 
 function Gallery () {
 
-  const { images, loadSampleImages, selectedCategory, deleteImage, updateImageDescription } = useContext(ImagesContext);
+  const { images, setImages, loadSampleImages, selectedCategory, deleteImage, updateImageDescription } = useContext(ImagesContext);
 
   let showingImages;
 
@@ -16,6 +16,19 @@ function Gallery () {
       image.category === selectedCategory
     ))
   }
+
+  // use images data (if exist) from localStorage
+  useEffect(() => {
+    const localStorageRef = localStorage.getItem('images');
+    if (localStorageRef) {
+      setImages(JSON.parse(localStorageRef));
+    }
+  }, []);
+
+  // update images data in localStorage
+  useEffect(() => {
+    localStorage.setItem('images', JSON.stringify(images));
+  }, [images])
 
   return (
     <section className='gallery-section'>
