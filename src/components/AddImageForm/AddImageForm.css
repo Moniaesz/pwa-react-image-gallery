@@ -5,16 +5,15 @@
   padding: 2rem
 }
 .add-image__form {
-  margin: 3rem auto 3rem auto;
+  margin: 1.5rem auto 1.5rem auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   border: 5px solid rgba(32, 218, 209, 0.527);
   padding: 1rem;
   max-width: fit-content;
   grid-gap: 1rem;
 }
 .add-image__descritption {
-  grid-column: 1 / -1;
+  width: 97.5%;
 }
 .add-image__form > * {
   font-family: inherit;
@@ -32,4 +31,14 @@
 }
 .btn-add-image:hover {
   background: rgba(32, 218, 209, 0.527);
+}
+
+@media screen and (min-width: 594px) {
+  .add-image__form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  .add-image__descritption {
+    grid-column: 1 / -1;
+  }
 }
