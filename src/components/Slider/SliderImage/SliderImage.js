@@ -5,12 +5,11 @@ import ImageInfo from '../../ImageInfo/ImageInfo';
 
 function SliderImage (props) {
   const { title, src, description, id, category } = props.image;
-  const { translateValue, deleteImage } = props;
+  const { deleteImage } = props;
 
   return (
     <div
       className='slider-image__container'
-      style={{transform: `translate(-${translateValue}px)`}}
     >
       <h3>{title}</h3>
       <ul className='slider-image__wrapper'>

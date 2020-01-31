@@ -65,8 +65,7 @@ const ImagesContextProvider = (props) => {
     }
   ]);
   const [ selectedCategory, setSelectedCategory ] = useState('all');
-  const [ translateValue, setTranslateValue ] = useState(0);
-  const [ count, setCount ] = useState(0)
+  const [ currentImage, setCurrentImage ]= useState(images[0]);
 
   const loadSampleImages = () => {
     setImages(sampleImages);
@@ -74,24 +73,22 @@ const ImagesContextProvider = (props) => {
 
    // go to next image in image gallery
    const nextImage = () => {
-    if (count === images.length - 1) {
-      setTranslateValue(0)
-      setCount(0)
-    } else {
-      setTranslateValue((translateValue) => translateValue + 1000);
-      setCount((count) => count + 1)
-    }
+     let nextImageID = images.indexOf(currentImage) + 1;
+     if (nextImageID === images.length) {
+       nextImageID = 0;
+     }
+     const nextImage = images[nextImageID];
+     setCurrentImage(nextImage);
   }
 
   // go to previous image in image gallery
   const previousImage = () => {
-    if (translateValue === 0 && count === 0) {
-      setTranslateValue((images.length - 1) * 1000);
-      setCount(images.length - 1)
-    } else {
-      setTranslateValue((translateValue) => translateValue - 1000)
-      setCount((count) => count - 1)
+    let previousImageID = images.indexOf(currentImage) - 1;
+    if (previousImageID === -1 ) {
+      previousImageID = images.length - 1;
     }
+    const previousImage = images[previousImageID];
+    setCurrentImage(previousImage);
   }
 
   // filter images in Gallery
@@ -126,8 +123,9 @@ const ImagesContextProvider = (props) => {
       value={{
         images,
         setImages,
+        currentImage,
+        setCurrentImage,
         selectedCategory,
-        translateValue,
         nextImage,
         previousImage,
         loadSampleImages,

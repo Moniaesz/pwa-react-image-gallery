@@ -15,7 +15,7 @@ function SliderNav ({ nextImage, previousImage }) {
           onClick={previousImage}
         />
       </li>
-      <li className='slider-nav__item'>Browse images</li>
+      <li className='slider-nav__item'><h3>Browse images</h3></li>
       <li className='slider-nav__item'>
         <img
           src={arrowRight}
