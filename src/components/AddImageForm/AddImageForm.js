@@ -20,7 +20,7 @@ function AddImageForm () {
       title: titleRef.current.value,
       description: descriptionRef.current.value,
       category: categoryRef.current.value,
-      src: imageRef.current.value ||"/images/gallery-photos/no-image-placeholder.jpg"
+      src: imageRef.current.value ||"/images/gallery-photos/image-placeholder.jpg"
     }
 
     addImage(image);
