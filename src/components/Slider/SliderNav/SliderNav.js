@@ -5,6 +5,18 @@ import './SliderNav.css';
 
 function SliderNav ({ nextImage, previousImage }) {
 
+  const keyPrev = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 37) {
+      previousImage();
+    }
+  }
+
+  const keyNext = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 39) {
+      nextImage();
+    }
+  }
+
   return (
     <nav className='slider-nav'>
     <ul className='slider-nav__list'>
@@ -13,6 +25,8 @@ function SliderNav ({ nextImage, previousImage }) {
           src={arrowLeft}
           alt='arrow left' className='slider-nav__icon arrow-left'
           onClick={previousImage}
+          tabIndex='0'
+          onKeyUp={(e) => keyPrev(e)}
         />
       </li>
       <li className='slider-nav__item'><h3>Browse images</h3></li>
@@ -21,6 +35,8 @@ function SliderNav ({ nextImage, previousImage }) {
           src={arrowRight}
           alt='arrow left' className='slider-nav__icon arrow-right'
           onClick={nextImage}
+          tabIndex='0'
+          onKeyUp={(e) => keyNext(e)}
         />
       </li>
     </ul>
