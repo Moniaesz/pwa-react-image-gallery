@@ -57,7 +57,7 @@ body > * {
   overflow: hidden;
 }
 .main {
-  padding-top: 8rem;
+  padding-top: 5rem;
 }
 .btn {
   border: 2px solid transparent;
@@ -74,4 +74,10 @@ body > * {
 }
 .btn:hover {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@media screen and (min-width: 981px) {
+  .main {
+    padding-top: 8rem;
+  }
 }
