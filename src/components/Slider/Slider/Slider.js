@@ -20,11 +20,15 @@ function Slider () {
       />
       <ul className='slider-images__list'>
         <div className='slider-images__wrapper'>
-          <SliderImage
-            key={currentImage.id}
-            image={currentImage}
-            deleteImage={deleteImage}
-          />
+          {
+            currentImage && (
+              <SliderImage
+                key={currentImage.id}
+                image={currentImage}
+                deleteImage={deleteImage}
+              />
+            )
+          }
         </div>
       </ul>
     </section>
