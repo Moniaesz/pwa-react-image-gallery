@@ -2,7 +2,7 @@
 .edit-text-form {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 1rem;
   align-items: stretch;
   background: rgba(0, 0, 0, 0.89);
   justify-content: center;

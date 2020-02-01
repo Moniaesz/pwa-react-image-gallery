@@ -6,6 +6,7 @@
   box-shadow: inset 0 0 10px #f1f1f1c0;
   width: 60rem;
   max-width: 80rem;
+  margin: 0 1rem;
 }
 .slider-image__wrapper {
   position: relative;
@@ -16,8 +17,8 @@
 }
 .slider__img {
   object-fit: contain;
+  max-width: 70vw;
   max-height: 500px;
-  max-width: 80vw;
 }
 .slider-img__description {
   max-width: 80%;
@@ -31,6 +32,9 @@
 }
 
 @media screen and (min-width: 981px) {
+  .slider__img {
+    max-width: 80vw;
+  }
   .slider-image__wrapper .image-details {
     top: -2rem;
     right: 1.5rem;

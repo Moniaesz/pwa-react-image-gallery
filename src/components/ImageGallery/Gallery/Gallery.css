@@ -6,9 +6,17 @@
   flex-wrap: wrap;
   max-width: 90rem;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 1.5rem;
 }
 .btn-sample-images {
-  color: #000;
-  background: #24FEE1;
+  color: #fff;
+  font-weight: 400;
+  background: rgb(39, 69, 139);
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 521px) {
+  .images__list {
+    padding: 3rem;
+  }
 }

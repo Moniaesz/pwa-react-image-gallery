@@ -6,6 +6,9 @@
   padding: 1rem;
   max-width: 20rem;
 }
+.images__list .single-img__description {
+  margin: 0.7rem;
+}
 .single-img_wrapper {
   position: relative;
 }

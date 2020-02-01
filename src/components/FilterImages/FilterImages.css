@@ -1,9 +1,9 @@
 /* Filter Images Section */
 .filter-images__section {
   max-width: 40rem;
-  margin: 3rem auto auto auto;
+  margin: 2rem auto auto auto;
   background: rgba(209, 209, 209, 0.452);
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
 }
 .filter-images__heading {
   font-size: 1.5rem;
@@ -28,4 +28,12 @@
 .filter-images__list-item:hover {
   background: rgb(235, 121, 14);
   color: #fff;
+}
+
+@media screen and (min-width: 521px) {
+  .filter-images__section {
+    margin: 3rem auto auto auto;
+    padding: 2rem 2rem 4rem 2rem;
+
+  }
 }
