@@ -23,7 +23,7 @@ function Gallery () {
     if (localStorageRef) {
       setImages(JSON.parse(localStorageRef));
     }
-  }, []);
+  }, [setImages]);
 
   // update images data in localStorage
   useEffect(() => {
