@@ -14,13 +14,16 @@ function EditTextForm({ changeDescription, handleInputChange, discardDescription
       <button
         type="submit"
         className="btn btn-change"
-        onClick={(e) => changeDescription(e,descriptionInput, id)}
+        onClick={(e) => changeDescription(e, descriptionInput, id)}
       >
-      Change description
+        Change description
       </button>
       <button
         className="btn btn-discard"
-        onClick={(e) => discardDescriptionChanges(e)}>Discard changes</button>
+        onClick={(e) => discardDescriptionChanges(e)}
+      >
+        Discard changes
+      </button>
     </form>
   );
 }

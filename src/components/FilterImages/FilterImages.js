@@ -8,6 +8,7 @@ function FilterImages () {
 
   const categories = ['landscape', 'people', 'cities', 'all'];
 
+  // key bindings
   const keyFilter = (e, category) => {
     if (e.keyCode === 13) {
       filterImages(category);

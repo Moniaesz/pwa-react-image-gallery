@@ -19,7 +19,7 @@ function SingleImage (props) {
 
   const [ imageSrc, setImageSrc ] = useState(src);
 
-  const handleInputChange = (inputValue) => setDescriptionInput(inputValue)
+  const handleInputChange = (inputValue) => setDescriptionInput(inputValue);
 
   const toggleInput = () => {
       showEditInput === false
@@ -56,25 +56,29 @@ function SingleImage (props) {
           className='images__single-img'
         />
       </div>
-      <h4 className='single-img__description'>{currentDesc}
-      </h4>
-      <button className='btn btn-toggle-description' onClick={() => toggleInput()}>
-          { showEditInput
+      <h4 className='single-img__description'>{currentDesc}</h4>
+      <button
+        className='btn btn-toggle-description'
+        onClick={() => toggleInput()}
+      >
+        {
+          showEditInput
             ? 'HIDE edit description form'
             : 'SHOW edit description form'
-          }
+        }
       </button>
-      {showEditInput &&
-          <EditTextForm
+      {
+        showEditInput &&
+        <EditTextForm
           id={id}
           changeDescription={changeDescription}
           handleInputChange={handleInputChange}
           descriptionInput={descriptionInput}
           discardDescriptionChanges={discardDescriptionChanges}
-          />
-        }
+        />
+      }
   </li>
-  )
+  );
 }
 
 export default SingleImage;

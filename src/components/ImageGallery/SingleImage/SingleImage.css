@@ -21,7 +21,7 @@
   transition: 0.1s ease-in;
 }
 .images__single-img:hover {
-  filter: grayscale(100%)
+  filter: grayscale(100%);
 }
 .single-img__description {
   margin-top: 0.5rem;

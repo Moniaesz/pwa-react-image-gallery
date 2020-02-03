@@ -25,8 +25,8 @@ function AddImageForm () {
 
     addImage(image);
     event.currentTarget.reset();
-
   }
+
   return (
     <section className='add-image__section'>
       <form onSubmit={createImage}>
@@ -60,7 +60,7 @@ function AddImageForm () {
         </fieldset>
       </form>
     </section>
-  )
+  );
 }
 
 export default AddImageForm;

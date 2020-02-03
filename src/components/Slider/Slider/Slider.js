@@ -32,7 +32,7 @@ function Slider () {
         </div>
       </ul>
     </section>
-  )
+  );
 }
 
 export default Slider;

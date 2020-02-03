@@ -28,7 +28,7 @@ function Gallery () {
   // update images data in localStorage
   useEffect(() => {
     localStorage.setItem('images', JSON.stringify(images));
-  }, [images])
+  }, [images]);
 
   return (
     <section className='gallery-section'>
@@ -59,7 +59,7 @@ function Gallery () {
 
       </ul>
     </section>
-  )
+  );
 }
 
 export default Gallery;

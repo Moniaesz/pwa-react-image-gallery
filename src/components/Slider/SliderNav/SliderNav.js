@@ -5,6 +5,7 @@ import './SliderNav.css';
 
 function SliderNav ({ nextImage, previousImage }) {
 
+  // key bindings
   const keyPrev = (e) => {
     if (e.keyCode === 13 || e.keyCode === 37) {
       previousImage();
@@ -41,7 +42,7 @@ function SliderNav ({ nextImage, previousImage }) {
       </li>
     </ul>
   </nav>
-  )
+  );
 }
 
 export default SliderNav;

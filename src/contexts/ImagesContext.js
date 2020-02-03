@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react';
 import sampleImages from '../sampleImages';
-import { generateRandomID } from '../helpers/generateID';
 
 export const ImagesContext = createContext();
 
@@ -9,7 +8,7 @@ const ImagesContextProvider = (props) => {
   const [ images, setImages ] = useState([]);
   const [ selectedCategory, setSelectedCategory ] = useState('all');
   const [ currentImage, setCurrentImage ] = useState(images[0]);
-  const [ currentImageID, setCurrentImageID ] = useState(0)
+  const [ currentImageID, setCurrentImageID ] = useState(0);
 
   const loadSampleImages = () => {
     setImages(sampleImages);
@@ -37,7 +36,7 @@ const ImagesContextProvider = (props) => {
 
   // filter images in Gallery
   const filterImages = (selectedCategory) => {
-    setSelectedCategory(selectedCategory)
+    setSelectedCategory(selectedCategory);
   }
 
   // add image to Gallery & Slider
@@ -55,7 +54,7 @@ const ImagesContextProvider = (props) => {
     setImages(images.filter((image) => (
       image.id !== id
     )));
-    setCurrentImageID(currentImageID)
+    setCurrentImageID(currentImageID);
   }
 
   // add image description in Gallery & Slider

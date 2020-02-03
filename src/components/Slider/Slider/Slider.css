@@ -1,14 +1,10 @@
 /* Slider */
 .slider-images__list {
-  /* height: fit-content; */
   margin: 0 auto;
   max-width: 80rem;
 }
-
 .slider-images__wrapper {
   display: flex;
-  /* width: fit-content;
-  height: fit-content; */
   overflow: hidden;
   position: relative;
   margin: 0 auto;

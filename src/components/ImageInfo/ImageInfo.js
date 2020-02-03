@@ -6,7 +6,7 @@ function ImageInfo ({ id, category, deleteImage }) {
 
   const keyDelete = (e) => {
     if (e.keyCode === 13) {
-      deleteImage(id)
+      deleteImage(id);
     }
   }
 
@@ -24,7 +24,7 @@ function ImageInfo ({ id, category, deleteImage }) {
         onKeyUp={(e) => keyDelete(e)}
       />
     </ul>
-  )
+  );
 }
 
 export default ImageInfo;
