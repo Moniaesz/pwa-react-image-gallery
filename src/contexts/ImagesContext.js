@@ -105,8 +105,10 @@ const ImagesContextProvider = (props) => {
   // add image to Gallery & Slider
   const deleteImage = (id) => {
     const clickedImage = images.find((image) => image.id === id)
-    const currentImageID = images.indexOf(clickedImage) - 1;
-
+    let currentImageID = images.indexOf(clickedImage) - 1;
+    if(currentImageID === -1) {
+      currentImageID = 0;
+    }
     setImages(images.filter((image) => (
       image.id !== id
     )));
