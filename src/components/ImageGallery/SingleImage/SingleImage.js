@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './SingleImage.css';
 import ImageInfo from '../../ImageInfo/ImageInfo';
 import EditTextForm from '../EditTextForm/EditTextForm';
+import { ImagesContext } from '../../../contexts/ImagesContext';
 
 function SingleImage (props) {
-  const {title, src, description, id, category } = props.image;
-  const { deleteImage, updateImageDescription } = props;
+  const { title, src, description, id, category } = props.image;
+
+  const { image } = props;
+
+  const { deleteImage, updateImageDescription, setCurrentImage } = useContext(ImagesContext);
 
   const [currentDesc, setCurrentDesc] = useState(description);
   const [showEditInput, setShowEditInput] = useState(false);
@@ -37,7 +41,7 @@ function SingleImage (props) {
 
   return (
     <li className='images__list-item'>
-      <div className='single-img_wrapper'>
+      <div className='single-img_wrapper' onClick={() => setCurrentImage(image)}>
         <ImageInfo
           id={id}
           category={category}

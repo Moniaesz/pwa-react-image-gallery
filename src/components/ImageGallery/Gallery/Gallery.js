@@ -5,7 +5,7 @@ import { ImagesContext } from '../../../contexts/ImagesContext';
 
 function Gallery () {
 
-  const { images, setImages, loadSampleImages, selectedCategory, deleteImage, updateImageDescription } = useContext(ImagesContext);
+  const { images, setImages, loadSampleImages, selectedCategory } = useContext(ImagesContext);
 
   let showingImages;
 
@@ -53,8 +53,6 @@ function Gallery () {
             <SingleImage
               key={image.id}
               image={image}
-              deleteImage={deleteImage}
-              updateImageDescription={updateImageDescription}
             />
           ))
         }
