@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SliderImage.css';
 import ImageInfo from '../../ImageInfo/ImageInfo';
-
+import offlineIMG from '../../../assets/offlineIMG.jpg';
 
 function SliderImage (props) {
   const { title, src, description, id, category } = props.image;
   const { deleteImage } = props;
+  const [ imageSrc, setImageSrc ] = useState(src);
 
   return (
     <div
@@ -15,7 +16,8 @@ function SliderImage (props) {
       <ul className='slider-image__wrapper'>
         <ImageInfo id={id} category={category} deleteImage={deleteImage}/>
         <img
-          src={src}
+          onError={() => setImageSrc(offlineIMG)}
+          src={imageSrc}
           alt={title}
           className='slider__img'
         />

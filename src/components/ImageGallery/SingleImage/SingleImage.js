@@ -3,6 +3,8 @@ import './SingleImage.css';
 import ImageInfo from '../../ImageInfo/ImageInfo';
 import EditTextForm from '../EditTextForm/EditTextForm';
 import { ImagesContext } from '../../../contexts/ImagesContext';
+import offlineIMG from '../../../assets/offlineIMG.jpg';
+
 
 function SingleImage (props) {
   const { title, src, description, id, category } = props.image;
@@ -13,11 +15,11 @@ function SingleImage (props) {
 
   const [currentDesc, setCurrentDesc] = useState(description);
   const [showEditInput, setShowEditInput] = useState(false);
-
   const [descriptionInput, setDescriptionInput] = useState("");
 
-  const handleInputChange = (inputValue) => setDescriptionInput(inputValue)
+  const [ imageSrc, setImageSrc ] = useState(src);
 
+  const handleInputChange = (inputValue) => setDescriptionInput(inputValue)
 
   const toggleInput = () => {
       showEditInput === false
@@ -48,7 +50,8 @@ function SingleImage (props) {
           deleteImage={deleteImage}
         />
         <img
-          src={src}
+          onError={() => setImageSrc(offlineIMG)}
+          src={imageSrc}
           alt={title}
           className='images__single-img'
         />
