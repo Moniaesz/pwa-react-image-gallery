@@ -6,11 +6,11 @@ import { ImagesContext } from '../../../contexts/ImagesContext';
 
 function Slider () {
 
-  const { images, nextImage, previousImage, deleteImage, currentImage, setCurrentImage } = useContext(ImagesContext);
+  const { images, nextImage, previousImage, deleteImage, currentImage, setCurrentImage, currentImageID } = useContext(ImagesContext);
 
   useEffect(() => {
-    setCurrentImage(images[0])
-  }, [images, setCurrentImage])
+    setCurrentImage(images[currentImageID]);
+  }, [images, setCurrentImage, currentImageID])
 
   return (
     <section className='slider-section'>

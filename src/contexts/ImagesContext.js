@@ -65,7 +65,8 @@ const ImagesContextProvider = (props) => {
     }
   ]);
   const [ selectedCategory, setSelectedCategory ] = useState('all');
-  const [ currentImage, setCurrentImage ]= useState(images[0]);
+  const [ currentImage, setCurrentImage ] = useState(images[0]);
+  const [ currentImageID, setCurrentImageID ] = useState(0)
 
   const loadSampleImages = () => {
     setImages(sampleImages);
@@ -103,9 +104,13 @@ const ImagesContextProvider = (props) => {
 
   // add image to Gallery & Slider
   const deleteImage = (id) => {
+    const clickedImage = images.find((image) => image.id === id)
+    const currentImageID = images.indexOf(clickedImage) - 1;
+
     setImages(images.filter((image) => (
       image.id !== id
     )));
+    setCurrentImageID(currentImageID)
   }
 
   // add image description in Gallery & Slider
@@ -125,6 +130,7 @@ const ImagesContextProvider = (props) => {
         setImages,
         currentImage,
         setCurrentImage,
+        currentImageID,
         selectedCategory,
         nextImage,
         previousImage,
