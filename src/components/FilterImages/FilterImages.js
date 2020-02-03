@@ -8,6 +8,12 @@ function FilterImages () {
 
   const categories = ['landscape', 'people', 'cities', 'all'];
 
+  const keyFilter = (e, category) => {
+    if (e.keyCode === 13) {
+      filterImages(category);
+    }
+  }
+
   return (
     <section className='filter-images__section'>
       <h2 className='filter-images__heading'>Filter by image category</h2>
@@ -16,7 +22,9 @@ function FilterImages () {
           <li
             key={category}
             className='filter-images__list-item'
+            tabIndex='0'
             onClick={() => filterImages(category)}
+            onKeyUp={(e) => keyFilter(e, category)}
             style={
               category === selectedCategory
               ? {background: 'rgb(235, 121, 14)', color: '#fff'}
