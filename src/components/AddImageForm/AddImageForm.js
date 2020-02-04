@@ -40,6 +40,7 @@ function AddImageForm () {
             required
           />
           <input
+            disabled
             name='image'
             placeholder='Image'
             ref={imageRef}
