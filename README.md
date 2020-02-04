@@ -8,6 +8,7 @@ App make use of:
 * Context API
 * localStorage
 * Progressive Web Applications (can be added to home screen)
+* key bindings
 * custom styling (flexbox & grid)
 
 #### App demo
@@ -27,6 +28,8 @@ Gallery & Slider demo can be visited [here](https://react-image-gallery-slider.n
 
 6. Persist images data irrespective of browser tab closing / refreshing.
 
+7. Get basic offline experience.
+
 #### For developers [setup instructions];
 
 1. Clone or download the repository.
@@ -45,4 +48,4 @@ Gallery & Slider demo can be visited [here](https://react-image-gallery-slider.n
 * layout made with [Flexbox Layout](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * sample images from [Pexels](https://www.pexels.com/)
 * icons by [Flaticon Premium](https://www.flaticon.com/home)
-* placeholder image illustration from [undraw](https://undraw.co/illustrations)
+* placeholder image illustrations from [undraw](https://undraw.co/illustrations)
