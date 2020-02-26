@@ -2,18 +2,19 @@ import React from 'react';
 import arrowLeft from '../../../assets/icons/arrow-left.svg';
 import arrowRight from '../../../assets/icons/arrow-right.svg';
 import './SliderNav.css';
+import { enterKey, arrowLeftKey, arrowRightKey } from '../../../helpers/keyCodes';
 
 function SliderNav ({ nextImage, previousImage }) {
 
   // key bindings
   const keyPrev = (e) => {
-    if (e.keyCode === 13 || e.keyCode === 37) {
+    if (e.keyCode === enterKey || e.keyCode === arrowLeftKey) {
       previousImage();
     }
   }
 
   const keyNext = (e) => {
-    if (e.keyCode === 13 || e.keyCode === 39) {
+    if (e.keyCode === enterKey || e.keyCode === arrowRightKey) {
       nextImage();
     }
   }

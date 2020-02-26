@@ -1,11 +1,12 @@
 import React from 'react';
 import deleteIcon from '../../assets/icons/delete-white.svg';
 import './ImageInfo.css';
+import { enterKey } from '../../helpers/keyCodes';
 
 function ImageInfo ({ id, category, deleteImage }) {
 
   const keyDelete = (e) => {
-    if (e.keyCode === 13) {
+    if (e.keyCode === enterKey) {
       deleteImage(id);
     }
   }

@@ -1,6 +1,7 @@
 import React, { useContext }  from 'react';
 import './FilterImages.css';
 import { ImagesContext } from '../../contexts/ImagesContext';
+import { enterKey } from '../../helpers/keyCodes';
 
 function FilterImages () {
 
@@ -10,7 +11,7 @@ function FilterImages () {
 
   // key bindings
   const keyFilter = (e, category) => {
-    if (e.keyCode === 13) {
+    if (e.keyCode === enterKey) {
       filterImages(category);
     }
   }
